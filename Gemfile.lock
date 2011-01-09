@@ -39,7 +39,7 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (>= 0.0.27)
       xpath (~> 0.1.2)
-    celerity (0.8.6)
+    celerity (0.8.7)
     childprocess (0.1.6)
       ffi (~> 0.6.3)
     cucumber (0.10.0)
@@ -50,24 +50,31 @@ GEM
       term-ansicolor (~> 1.0.5)
     cucumber-rails (0.3.2)
       cucumber (>= 0.8.0)
-    culerity (0.2.13)
+    culerity (0.2.14)
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    factory_girl (1.3.3)
+    ffi (0.6.3)
+      rake (>= 0.8.7)
     ffi (0.6.3-x86-mingw32)
       rake (>= 0.8.7)
+    gherkin (2.3.3)
+      json (~> 1.4.6)
     gherkin (2.3.3-x86-mingw32)
       json (~> 1.4.6)
     i18n (0.5.0)
+    json (1.4.6)
     json (1.4.6-x86-mingw32)
     json_pure (1.4.6)
-    mail (2.2.13)
+    mail (2.2.14)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
-    nokogiri (1.4.4.1-x86-mingw32)
+    nokogiri (1.4.4)
+    nokogiri (1.4.4-x86-mingw32)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -105,6 +112,7 @@ GEM
       ffi (~> 0.6.3)
       json_pure
       rubyzip
+    sqlite3-ruby (1.3.2)
     sqlite3-ruby (1.3.2-x86-mingw32)
     term-ansicolor (1.0.5)
     thor (0.14.6)
@@ -115,15 +123,17 @@ GEM
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
       rack-test (>= 0.5.3)
-    xpath (0.1.2)
+    xpath (0.1.3)
       nokogiri (~> 1.3)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
   capybara
   cucumber-rails
+  factory_girl
   rails (= 3.0.3)
   rspec-rails (= 2.0.0.beta.11)
   sqlite3-ruby
