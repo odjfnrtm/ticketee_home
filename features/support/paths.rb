@@ -12,7 +12,10 @@ module NavigationHelpers
       '/'
 
     when /the project page for "([^\"]*)"/
-      project_path(Project.find_by_name($1))
+      project_path(project($1))
+
+    when /the "([^\"]*)" ticket in the "([^\"]*)" project/
+      project_ticket_path(project($2), Ticket.find_by_title!($1))
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
@@ -30,6 +33,10 @@ module NavigationHelpers
           "Now, go and add a mapping in #{__FILE__}"
       end
     end
+  end
+
+  def project(name)
+    Project.find_by_name!(name)
   end
 end
 
